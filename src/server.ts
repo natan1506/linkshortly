@@ -12,11 +12,19 @@ import pino from "pino";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { authRoutes } from "./routes/auth";
+import authPlugin from "./plugins/jwt.js";
+import path from "path";
+import fs from "fs";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.resolve();
+const logDir = join(__dirname, "./logs");
 
-const logFile = pino.destination(join(__dirname, "../logs/fastify.log"));
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });
+}
+
+const logFile = pino.destination(join(logDir, "fastify.log"));
+
 const app = Fastify({
   logger: {
     level: "info",
@@ -35,6 +43,7 @@ app.register(rateLimit, {
   max: 10,
   timeWindow: "1 minute",
 });
+app.register(authPlugin);
 
 setupErrorHandler(app);
 app.register(shortenRoutes);
