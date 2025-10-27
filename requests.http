@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:{{PORT}}
+@PORT = 3333
+
+### Criar User
+# @name user
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "natan@123.com",
+  "password": "123456"
+}
+###
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "natan@123.com",
+  "password": "123456"
+}
+
+### Criar link encurtado
+# @name shorten
+POST {{baseUrl}}/shorten
+Content-Type: application/json
+
+{
+  "url": "https://www.linkedin.com"
+}
+
+###
+
+### Consultar o link encurtado usando o resultado anterior
+# @name redirect
+@shortUrl = {{shorten.response.body.shortUrl}}
+
+GET {{shortUrl}}
+
+### Consulta o stats de um link
+# @name stats
+GET {{baseUrl}}/stats/4b790e86
