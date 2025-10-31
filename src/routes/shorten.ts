@@ -46,6 +46,14 @@ export async function shortenRoutes(app: FastifyInstance) {
               },
             },
           },
+          401: {
+            type: "object",
+            properties: {
+              message: {
+                type: "string",
+              },
+            },
+          },
         },
       },
     },
