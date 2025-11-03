@@ -15,6 +15,7 @@ import { authRoutes } from "./routes/auth";
 import authPlugin from "./plugins/jwt.js";
 import path from "path";
 import fs from "fs";
+process.env.NODE_ENV = "test"; // garante .env.test ser usado
 
 const __dirname = path.resolve();
 const logDir = join(__dirname, "./logs");
