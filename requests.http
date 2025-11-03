@@ -26,7 +26,7 @@ Content-Type: application/json
 # @name shorten
 POST {{baseUrl}}/shorten
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQxNGZiNDhkLTkwNDgtNDg0MC1hYzI0LTc2NmZmOThhN2JkYSIsImVtYWlsIjoibmF0YW5AMTIzLmNvbSIsImlhdCI6MTc2MTY2MjQwMywiZXhwIjoxNzYxNjY2MDAzfQ.bMJUMU7CrRkWwJ_dmPfr0cJZ1IA1imjSYLX6B9DnUtg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3NzcwZDI4LTcxNzEtNDJmNS1iNzEwLWY0MDQzM2Q1YTUxOSIsImVtYWlsIjoibmF0YW5AMTIzLmNvbSIsImlhdCI6MTc2MTkzMjYwMiwiZXhwIjoxNzYxOTM2MjAyfQ.my-IsZxqBlOYdIPe74r7dSLZMXm4qIpcQDWVRcxc4i8
 
 {
   "url": "https://www.linkedin.com"
@@ -43,4 +43,4 @@ GET {{shortUrl}}
 ### Consulta o stats de um link
 # @name stats
 GET {{baseUrl}}/stats/4b790e86
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQxNGZiNDhkLTkwNDgtNDg0MC1hYzI0LTc2NmZmOThhN2JkYSIsImVtYWlsIjoibmF0YW5AMTIzLmNvbSIsImlhdCI6MTc2MTY2MjQwMywiZXhwIjoxNzYxNjY2MDAzfQ.bMJUMU7CrRkWwJ_dmPfr0cJZ1IA1imjSYLX6B9DnUtg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3NzcwZDI4LTcxNzEtNDJmNS1iNzEwLWY0MDQzM2Q1YTUxOSIsImVtYWlsIjoibmF0YW5AMTIzLmNvbSIsImlhdCI6MTc2MTkzMjYwMiwiZXhwIjoxNzYxOTM2MjAyfQ.my-IsZxqBlOYdIPe74r7dSLZMXm4qIpcQDWVRcxc4i8

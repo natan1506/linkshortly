@@ -80,3 +80,12 @@
 {"level":30,"time":1761662395035,"pid":97263,"hostname":"NAtans-Mac-mini.local","reqId":"req-1","res":{"statusCode":500},"responseTime":20.545315999537706,"msg":"request completed"}
 {"level":30,"time":1761662402622,"pid":97263,"hostname":"NAtans-Mac-mini.local","reqId":"req-2","req":{"method":"POST","url":"/auth/login","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":52874},"msg":"incoming request"}
 {"level":30,"time":1761662403378,"pid":97263,"hostname":"NAtans-Mac-mini.local","reqId":"req-2","res":{"statusCode":200},"responseTime":755.9947250001132,"msg":"request completed"}
+{"level":30,"time":1761932553126,"pid":78605,"hostname":"NAtans-Mac-mini.local","msg":"Server listening at http://[::1]:3333"}
+{"level":30,"time":1761932553132,"pid":78605,"hostname":"NAtans-Mac-mini.local","msg":"Server listening at http://127.0.0.1:3333"}
+{"level":30,"time":1761932589288,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-1","req":{"method":"POST","url":"/auth/register","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":55199},"msg":"incoming request"}
+{"level":30,"time":1761932590721,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-1","res":{"statusCode":201},"responseTime":1432.081274997443,"msg":"request completed"}
+{"level":30,"time":1761932602042,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-2","req":{"method":"POST","url":"/auth/login","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":55202},"msg":"incoming request"}
+{"level":30,"time":1761932602258,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-2","res":{"statusCode":200},"responseTime":215.9946449995041,"msg":"request completed"}
+{"level":30,"time":1761932623474,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-3","req":{"method":"POST","url":"/shorten","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":55208},"msg":"incoming request"}
+{"level":30,"time":1761932623661,"pid":78605,"hostname":"NAtans-Mac-mini.local","event":"link_created","url":"https://www.linkedin.com","code":"820f5b5e"}
+{"level":30,"time":1761932623665,"pid":78605,"hostname":"NAtans-Mac-mini.local","reqId":"req-3","res":{"statusCode":200},"responseTime":191.08266399800777,"msg":"request completed"}

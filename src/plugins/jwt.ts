@@ -9,10 +9,9 @@ export default fp(async (app) => {
 
   app.decorate("authenticate", async function (request: any, reply: any) {
     try {
-      const decoded = await request.jwtVerify();
-      request.user = decoded;
-    } catch (err) {
-      reply.send(err);
+      await request.jwtVerify();
+    } catch (err: any) {
+      return reply.code(401).send({ message: "Unauthorized" });
     }
   });
 });

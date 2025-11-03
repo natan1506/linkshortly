@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run --dir tests",
+    "test:watch": "vitest watch --dir tests",
+    "test:integration": "vitest run --dir tests/integration",
+    "test:unit": "vitest run --dir tests/unit",
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
     "build": "tsc"
