@@ -30,31 +30,23 @@ jobs:
       JWT_SECRET: test_secret
       NODE_ENV: test
 
-     steps:
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'pnpm'
+          node-version: 20
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
-      - name: Generate Prisma client
-        run: pnpm prisma generate
-
-      - name: Setup test database
-        env:
-          DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/test_db?schema=public"
-        run: pnpm prisma db push --force-reset --accept-data-loss
+      - name: Run migrations
+        run: npx prisma migrate deploy
 
       - name: Run tests
-        env:
-          DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/test_db?schema=public"
-        run: pnpm test -- --run
+        run: npm test
+
+      - name: Build project
+        run: npm run build
