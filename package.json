@@ -11,7 +11,8 @@
     "test:unit": "vitest run --dir tests/unit",
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
