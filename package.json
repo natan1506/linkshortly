@@ -11,10 +11,10 @@
     "test:unit": "vitest run --dir tests/unit",
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
-    "build": "prisma generate && tsc",
     "lint": "eslint .",
     "postinstall": "prisma generate",
-    "vercel-build": "prisma generate && tsc"
+    "build": "prisma generate --schema=./prisma/schema.prisma && tsc",
+    "vercel-build": "prisma generate --schema=./prisma/schema.prisma && tsc"
   },
   "keywords": [],
   "author": "",
