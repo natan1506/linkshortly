@@ -4,8 +4,7 @@ import Fastify, { FastifyInstance } from "fastify";
 import { shortenRoutes } from "../../src/routes/shorten";
 import { authRoutes } from "../../src/routes/auth";
 import authPlugin from "../../src/plugins/jwt";
-import PrismaPkg from "@prisma/client";
-const { PrismaClient } = PrismaPkg as typeof import("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 
 export const prisma = new PrismaClient();
 

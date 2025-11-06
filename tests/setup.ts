@@ -1,5 +1,4 @@
-import PrismaPkg from "@prisma/client";
-const { PrismaClient } = PrismaPkg as typeof import("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 import dotenv from "dotenv";
 import { afterAll, beforeEach } from "vitest";
 dotenv.config({ path: ".env.test" });
